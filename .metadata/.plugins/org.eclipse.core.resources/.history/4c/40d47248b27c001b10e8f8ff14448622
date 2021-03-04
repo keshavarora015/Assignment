@@ -1,0 +1,46 @@
+package com.company.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Department {
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int did;
+	private String dname;
+	private List<Employee>employees=new ArrayList<>();
+	public int getDid() {
+		return did;
+	}
+	public void setDid(int did) {
+		this.did = did;
+	}
+	public String getDname() {
+		return dname;
+	}
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
+	public Department() {
+	}
+	public Department(int did, String dname, List<Employee> employees) {
+		this.did = did;
+		this.dname = dname;
+		this.employees = employees;
+	}
+	@Override
+	public String toString() {
+		return "Department [did=" + did + ", dname=" + dname + ", employees=" + employees + "]";
+	}
+}
+

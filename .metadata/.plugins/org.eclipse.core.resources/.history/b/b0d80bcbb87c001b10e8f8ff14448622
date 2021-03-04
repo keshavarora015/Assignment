@@ -1,0 +1,8 @@
+package com.company.model.service;
+
+import com.company.model.dao.Employee;
+
+
+public interface DepartmentService {
+	public List<Employee> getAllEmployee();	
+}

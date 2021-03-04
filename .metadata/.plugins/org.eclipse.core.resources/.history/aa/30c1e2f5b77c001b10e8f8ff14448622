@@ -1,0 +1,13 @@
+package com.company.model.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.company.model.dao.Employee;
+
+@Service
+@Transactional
+public interface DepartmentService {
+	public Iterable<Employee> getAllEmployee();	
+}
